@@ -1,0 +1,25 @@
+def even_odd_count(numbers):  # Loeb numbrid üle
+    even_count = 0 # 0 numbrit
+    odd_count = 0 # 0 Numbrit
+
+    for num in numbers:  # See kood võtab sisendiks arvude loendi (mida nimetatakse "numbriteks")
+        if num % 2 == 0: #  tagastab kahe väärtusega korrutise: paarisarvude arvu ja paaritute arvu loendis.
+# For tsükkel kordab "numbrite" loendis iga numbrit. Iga korduse jaoks.
+            even_count += 1
+        else:
+            odd_count += 1
+
+    return (even_count, odd_count)
+
+# Programmi on lisatud numbrid ühest kümneni
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even, odd = even_odd_count(numbers)
+print(f"Number of even numbers in the list is {even} and number of odd numbers is {odd}.")
+ # Programmi on lisatud paarisarvud
+numbers = [2, 4, 6, 8, 10]
+even, odd = even_odd_count(numbers)
+print(f"Number of even numbers in the list is {even} and number of odd numbers is {odd}.")
+# Muutujasse pole numbreid sisestatud seega programm ei saagi paaris ega paarituid arve sellest reast ja väljastab  0
+numbers = []
+even, odd = even_odd_count(numbers)
+print(f"Number of even numbers in the list is {even} and number of odd numbers is {odd}.")
